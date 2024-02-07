@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TaskForm from "./Component/TaskForm"
+import TaskList from "./Component/TaskList";
 
 function App() {
   
@@ -10,6 +11,9 @@ function App() {
   return (
     <>
       <TaskForm AddTask={AddTask}></TaskForm>
+      <TaskList tasks={tasks}
+      setTasks={setTasks}
+      ></TaskList>
     </>
   )
 }

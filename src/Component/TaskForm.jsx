@@ -15,13 +15,13 @@ export default function TaskForm({AddTask}) {
         completed: false,
         priority: priority
       };
-      console.log(newTask)
+    //   console.log(newTask)
       AddTask(newTask);
 
       setTaskName('');
       setPriority('low');
     };
-    console.log(tasks)
+    // console.log(tasks)
   return (
     <div>
         <form onSubmit={handleSubmit} className="mb-4">
