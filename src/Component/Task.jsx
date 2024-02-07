@@ -11,7 +11,13 @@ function Task({ task, onDelete, onToggleStatus, onEdit }) {
   };
 
   return (
-    <li className={`border-b border-gray-300 p-4 flex justify-between items-center ${task.completed ? 'text-gray-400' : ''}`}>
+    <li className={`border-b border-gray-300 p-4 flex justify-between  ${task.completed ? 'text-gray-400' : ''}`}>
+      <input
+          type="checkbox"
+          checked={task.completed}
+          onChange={onToggleStatus}
+          className="mr-2"
+        />
       {!isEditing ? (
         <span
           onClick={onToggleStatus}
