@@ -24,7 +24,7 @@ export default function TaskForm({AddTask}) {
     // console.log(tasks)
   return (
     <div>
-        <form onSubmit={handleSubmit} className="mb-4">
+        <form onSubmit={handleSubmit} className="mx-auto">
       <div className="flex items-center">
         <input
           type="text"

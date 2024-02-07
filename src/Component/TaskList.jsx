@@ -1,4 +1,4 @@
-
+import Task from './Task';
 
 function TaskList({ tasks,setTasks }) {
     const deleteTask = id => {
@@ -20,18 +20,12 @@ function TaskList({ tasks,setTasks }) {
         );
       };
 
-      const [isEditing, setIsEditing] = useState(false);
-  const [updatedTaskName, setUpdatedTaskName] = useState(task.name);
-
-  const handleEdit = () => {
-    editTask(task.id, updatedTaskName);
-    setIsEditing(false);
-  };
+ 
   return (
     <ul className="list-none p-0">
       {tasks.map(task => (
         <>
-        <li className={`border-b border-gray-300 p-4 flex justify-between items-center ${task.completed ? 'text-gray-400' : ''}`}>
+        {/* <li className={`border-b border-gray-300 p-4 flex justify-between items-center ${task.completed ? 'text-gray-400' : ''}`}>
       <span
       onClick={toggleTaskStatus}
         
@@ -52,7 +46,15 @@ function TaskList({ tasks,setTasks }) {
         </span>
         <button className="text-red-500 ml-4" onClick={() => deleteTask(task.id)}>Delete</button>
       </div>
-    </li>
+    </li> */}
+     <Task
+          key={task.id}
+          task={task}
+          onDelete={() => deleteTask(task.id)}
+          onToggleStatus={() => toggleTaskStatus(task.id)}
+          onEdit={editTask}
+        />
+
         </>
       ))}
     </ul>
