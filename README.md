@@ -1,3 +1,4 @@
 TodoApp
 ![image](https://github.com/AhmedMuktadir14218/Qtec-Task-ToDoApp/assets/100287308/858e3dae-ee54-4e9a-bab8-2b58a431fb40)
-using ReactJs-tailwindCSS
+
+The **TodoApp** List application is a simple task management tool built using **React**. It allows users to add, edit, and delete tasks with ease. Each task has a name, a status indicating whether it is completed or not, and can be assigned a priority level (low, medium, or high). The application provides a clean and user-friendly interface for managing tasks, displaying them in an organized manner. Additionally, the application includes features such as a counter for total tasks and completed tasks, and it utilizes local storage to persist tasks even after page refreshes. With its responsive design using **Tailwind CSS**, the Todo List app offers a seamless experience across various devices.
