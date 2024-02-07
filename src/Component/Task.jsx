@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 
 function Task({ task, onDelete, onToggleStatus, onEdit }) {
@@ -47,6 +46,8 @@ function Task({ task, onDelete, onToggleStatus, onEdit }) {
         <button className="text-red-500 ml-4" onClick={onDelete}>Delete</button>
       </div>
     </li>
+
+    
   );
 }
 
