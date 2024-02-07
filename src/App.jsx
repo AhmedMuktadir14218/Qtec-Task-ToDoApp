@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TaskForm from "./Component/TaskForm"
 import TaskList from "./Component/TaskList";
 import TaskCounter from "./Component/TaskCounter";
@@ -7,11 +7,21 @@ function App() {
   
   const [tasks, setTasks] = useState([]);
 
+
   const AddTask = task => {
     setTasks([...tasks, task]);}
 
     const totalTasks = tasks.length;
     const completedTasks = tasks.filter(task => task.completed).length;
+
+    useEffect(() => {
+      const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+      if (storedTasks) setTasks(storedTasks);
+    }, []);
+  
+    useEffect(() => {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);
   
   return (
     <>
